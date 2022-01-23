@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "";
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -67,40 +67,41 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  {separator, "\x02  ", NULL},
-  { media_mpd_stat,       "%s ",          NULL},
-  {separator, "\x05  ", NULL},
-  {cpu_perc,            " %s%% |",            NULL},
+  {separator, "^b#1e1f26^^c#BD93F9^  ", NULL},
+  /* { media_mpd_stat,       "%s ",          NULL}, */
+  { run_command,       "%s ",          "~/Downloads/scripts/mpd-status&"},
+  {separator, "^b#1e1f26^^c#50FA7B^  ", NULL},
+  {cpu_perc,            " %s%% ",            NULL},
   {cpu_freq,            " %shz ",            NULL},
-  {separator, "\x03  ", NULL},
+  {separator, "^b#1e1f26^^c#FF5555^  ", NULL},
   {ram_perc,            "%s%% ",            NULL},
   {ram_used,            "%s ",            NULL},
-  {separator, "\x04  ", NULL},
+  {separator, "^b#1e1f26^^c#F1FA8C^  ", NULL},
   {temp,            "%s° ",            "/sys/class/hwmon/hwmon5/temp1_input"},
-  {separator, "\x07  ", NULL},
-  {wifi_essid,            " %s",            "wlp3s0"},
-  {wifi_perc,            " %s%%",            "wlp3s0"},
+  {separator, "^b#1e1f26^^c#FF79C6^  ", NULL},
+  /* {wifi_essid,            " %s",            "wlp3s0"}, */
+  /* {wifi_perc,            " %s%%",            "wlp3s0"}, */
   {ipv4,            " %s",            "wlp3s0"},
   {netspeed_rx, "  %s", "wlp3s0"},
   {netspeed_tx, "  %s ", "wlp3s0"},
-  {separator, "\x08  ", NULL},
+  {separator, "^b#1e1f26^^c#8BE9FD^  ", NULL},
   {ipv4,            " %s",            "enp0s31f6"},
   {netspeed_rx, "  %s", "enp0s31f6"},
   {netspeed_tx, "  %s ", "enp0s31f6"},
-  {separator, "\xa  ", NULL},
-  {disk_perc, " %s%% ", "/"},
+  {separator, "^b#1e1f26^^c#6272A4^   ", NULL},
+  /* {disk_perc, " %s%% ", "/"}, */
   {disk_free, "%s ", "/"},
-  {disk_perc, "%s%% ", "/mnt/PABLO"},
-  {disk_free, "%s", "/mnt/PABLO"},
-  {separator, "\x06  ", NULL},
-  { datetime, "%s",           "%d/%m/%y %T" },
-  {separator, "\x07 ", NULL},
-  { run_command,  "%s ",              "$(pamixer --get-mute) && echo  || echo  " },
-	{ run_command,  "%s%%",       "pamixer --get-volume" },
-  {separator, "\x02   ", NULL},
+  /* {disk_perc, "%s%% ", "/mnt/PABLO"}, */
+  {disk_free, "%s ", "/mnt/PABLO"},
+  {separator, "^b#1e1f26^^c#FF92DF^   ", NULL},
+  { datetime, "%s ",           "%d/%m/%y %T" },
+  {separator, "^b#1e1f26^^c#69FF94^ ", NULL},
+  { run_command,  "%s ",              "$(pamixer --get-mute) && echo   || echo  " },
+	{ run_command,  " %s%% ",       "pamixer --get-volume" },
+  {separator, "^c#BD93F9^^b#1e1f26^   ", NULL},
   {battery_perc, "%s", "BAT0"},
   {battery_state, "%s ", "BAT0"},
   {battery_perc, "%s", "BAT1"},
   {battery_state, "%s ", "BAT1"},
-	{ run_command,  "%s",       "cat /tmp/dwmbuf" },
+	{ run_command,  " %s ",       "cat /tmp/dwmbuf" },
 };
