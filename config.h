@@ -88,7 +88,7 @@ static const struct arg args[] = {
   {ipv4,            " %s",            "eth0"},
   {netspeed_rx, "  %s", "eth0"},
   {netspeed_tx, "  %s ", "eth0"},
-  {separator, "^c#000000^^b#5f574f^   ", NULL},
+  {separator, "^c#000000^^b#ffffff^   ", NULL},
   /* {disk_perc, " %s%% ", "/"}, */
   {disk_free, "%s ", "/"},
   /* {disk_perc, "%s%% ", "/mnt/PABLO"}, */
