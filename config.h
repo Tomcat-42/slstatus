@@ -67,38 +67,38 @@ static const char unknown_str[] = "";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  {separator, "^c#000000^^b#ff004d^  ", NULL},
+  {separator, "^b#000000^^c#ff004d^  ", NULL},
   /* { media_mpd_stat,       "%s ",          NULL}, */
   { run_command,       "%s ",          "~/scripts/mpd-status&"},
-  {separator, "^c#000000^^b#00e756^  ", NULL},
+  {separator, "^b#000000^^c#00e756^  ", NULL},
   {cpu_perc,            " %s%% ",            NULL},
   {cpu_freq,            " %shz ",            NULL},
-  {separator, "^c#000000^^b#fff024^  ", NULL},
+  {separator, "^b#000000^^c#fff024^  ", NULL},
   {ram_perc,            "%s%% ",            NULL},
   {ram_used,            "%s ",            NULL},
-  {separator, "^c#000000^^b#83769c^  ", NULL},
+  {separator, "^b#000000^^c#83769c^  ", NULL},
   {temp,            "%s° ",            "/sys/class/hwmon/hwmon5/temp1_input"},
-  {separator, "^c#000000^^b#ff77a8^  ", NULL},
+  {separator, "^b#000000^^c#ff77a8^  ", NULL},
   /* {wifi_essid,            " %s",            "wlp3s0"}, */
   /* {wifi_perc,            " %s%%",            "wlp3s0"}, */
   {ipv4,            " %s",            "wlan0"},
   {netspeed_rx, "  %s", "wlan0"},
   {netspeed_tx, "  %s ", "wlan0"},
-  {separator, "^c#000000^^b#29adff^  ", NULL},
+  {separator, "^b#000000^^c#29adff^  ", NULL},
   {ipv4,            " %s",            "eth0"},
   {netspeed_rx, "  %s", "eth0"},
   {netspeed_tx, "  %s ", "eth0"},
-  {separator, "^c#000000^^b#ffffff^   ", NULL},
+  {separator, "^b#000000^^c#ffffff^   ", NULL},
   /* {disk_perc, " %s%% ", "/"}, */
   {disk_free, "%s ", "/"},
   /* {disk_perc, "%s%% ", "/mnt/PABLO"}, */
   {disk_free, "%s ", "/mnt/data"},
-  {separator, "^c#000000^^b#ff004d^   ", NULL},
+  {separator, "^b#000000^^c#ff004d^   ", NULL},
   { datetime, "%s ",           "%d/%m/%y %T" },
-  {separator, "^c#000000^^b#00e756^ ", NULL},
+  {separator, "^b#000000^^c#00e756^ ", NULL},
   { run_command,  "%s ",              "$(pamixer --get-mute) && echo   || echo  " },
 	{ run_command,  " %s%% ",       "pamixer --get-volume" },
-  {separator, "^b#fff024^^c#000000^   ", NULL},
+  {separator, "^c#fff024^^b#000000^   ", NULL},
   {battery_perc, "%s", "BAT0"},
   {battery_state, "%s ", "BAT0"},
   {battery_perc, "%s", "BAT1"},
