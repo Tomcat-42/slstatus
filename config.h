@@ -67,9 +67,9 @@ static const char unknown_str[] = "";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  {separator, "^b#000000^^c#ff004d^  ", NULL},
+  // {separator, "^b#000000^^c#ff004d^  ", NULL},
   /* { media_mpd_stat,       "%s ",          NULL}, */
-  { run_command,       "%s ",          "~/scripts/mpd-status&"},
+  // { run_command,       "%s ",          "~/scripts/mpd-status&"},
   {separator, "^b#000000^^c#00e756^  ", NULL},
   {cpu_perc,            " %s%% ",            NULL},
   {cpu_freq,            " %shz ",            NULL},
@@ -92,7 +92,7 @@ static const struct arg args[] = {
   /* {disk_perc, " %s%% ", "/"}, */
   {disk_free, "%s ", "/"},
   /* {disk_perc, "%s%% ", "/mnt/PABLO"}, */
-  {disk_free, "%s ", "/mnt/data"},
+  {disk_free, "%s ", "/mnt/files"},
   {separator, "^b#000000^^c#ff004d^   ", NULL},
   { datetime, "%s ",           "%d/%m/%y %T" },
   {separator, "^b#000000^^c#00e756^ ", NULL},
@@ -103,5 +103,5 @@ static const struct arg args[] = {
   {battery_state, "%s ", "BAT0"},
   {battery_perc, "%s", "BAT1"},
   {battery_state, "%s ", "BAT1"},
-	{ run_command,  " %s ",       "cat /tmp/dwmbuf" },
+	{ run_command,  " %s ",       "[[ -f /tmp/dwmbuf ]] && cat /tmp/dwmbuf" },
 };
