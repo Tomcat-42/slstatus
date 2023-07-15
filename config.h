@@ -81,7 +81,7 @@ static const struct arg args[] = {
   {separator, "^b#000000^^c#ff77a8^  ", NULL},
   {wifi_essid,            " %s",            "wlp0s20f3"},
   {wifi_perc,            " %s%%",            "wlp0s20f3"},
-  {ipv4,            " %s",            "wlan0"},
+  {ipv4,            " %s",            "wlp0s20f3"},
   {netspeed_rx, "  %s", "wlp0s20f3"},
   {netspeed_tx, "  %s ", "wlp0s20f3"},
   // {separator, "^b#000000^^c#29adff^  ", NULL},
